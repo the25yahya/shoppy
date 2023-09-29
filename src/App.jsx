@@ -7,7 +7,9 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 function App() {
   return(
-   <h1 className='underline text-3xl'>app</h1>
+    <div>
+      
+    </div>
   )
 }
 
