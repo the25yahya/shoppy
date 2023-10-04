@@ -1,26 +1,33 @@
 import './App.css'
+import { ChakraProvider } from '@chakra-ui/react';
 import React, {useEffect} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import { Tooltip } from '@chakra-ui/react'
 import { Navbar, Footer, Sidebar, ThemeSettings} from './components'
 import {Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Line} from './pages'
 import './App.css'
 
 
 function App() {
+
+  const CustomToolTip = () => (
+    <Tooltip label='settings'>
+      <button style={{background:"blue",borderRadius:"50%"}} type='button'
+             className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white'>
+               <FiSettings />
+             </button>
+    </Tooltip>
+  )
+
   const activeMenu = true;
   return(
+    <ChakraProvider>
     <div>
       <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>
          <div className='fixed right-4 bottom-4' style={{ zIndex:'1000' }}>
-          <TooltipComponent content="settings" position="top">
-           <button style={{background:"blue",borderRadius:"50%"}} type='button'
-           className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white'>
-             <FiSettings />
-           </button>
-          </TooltipComponent>
+          <CustomToolTip/>
          </div>
          {activeMenu?(
           <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg
@@ -69,6 +76,7 @@ function App() {
         </div>
       </BrowserRouter>
     </div>
+    </ChakraProvider>
   )
 }
 
