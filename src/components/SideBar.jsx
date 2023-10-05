@@ -20,7 +20,7 @@ const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md 
           <Link to="/" onClick={()=>{}}
             className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight text-slate-900"
           >
-            <SiShopware /> <span>shoppy</span>
+            <SiShopware /> <span>DashX</span>
           </Link>
           <TooltipComponent content="menu"
           position="BottomCenter">
