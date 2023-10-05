@@ -471,6 +471,7 @@ export const employeesGrid = [
 
 export const links = [
   {
+    index:'1',
     title: 'Dashboard',
     links: [
       {
@@ -481,6 +482,7 @@ export const links = [
   },
 
   {
+    index:'2',
     title: 'Pages',
     links: [
       {
@@ -498,6 +500,7 @@ export const links = [
     ],
   },
   {
+    index : '3',
     title: 'Apps',
     links: [
       {
@@ -519,6 +522,7 @@ export const links = [
     ],
   },
   {
+    index : '4',
     title: 'Charts',
     links: [
       {
