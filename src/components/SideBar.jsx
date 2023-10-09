@@ -24,7 +24,7 @@ const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md 
           >
             <SiShopware /> <span>DashX</span>
           </Link>
-          <TooltipComponent content="menu"
+          <Tooltip label="menu"
           position="BottomCenter">
             <button type="button" 
                onClick={() => setActiveMenu(
@@ -32,7 +32,7 @@ const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md 
              className='text-xl rounded-full p-3 mt-4 block md:hidden'>
               <MdOutlineCancel />
             </button>
-          </TooltipComponent>
+          </Tooltip>
         </div>
         <div className='mt-10'>
           {links.map((item)=>(
