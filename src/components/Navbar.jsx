@@ -43,6 +43,45 @@ const Navbar = () => {
         color="blue"
         icon={<AiOutlineMenu />}
       />
+      <div className='flex'>
+       <Navbutton
+        title='cart' 
+        customFunc={()=>handleClick('cart')}
+        color="blue"
+        icon={<FiShoppingCart />}
+       />
+       <Navbutton
+        title='chat'
+        dotColor="#03C9D7" 
+        customFunc={()=>handleClick('cart')}
+        color="blue"
+        icon={<BsChatLeft />}
+       />
+       <Navbutton
+        title='Notifications'
+        dotColor="#03C9D7" 
+        customFunc={()=>handleClick('notification')}
+        color="blue"
+        icon={<RiNotification3Line />}
+       />
+       <Tooltip
+       label="Profile">
+         <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-gray-100 rounded-lg'
+         onClick={()=> handleClick('userProfile')}>
+          <img
+            className='rounded-full w-8 h-8'
+            src={avatar}
+          />
+          <p>
+            <span className='text-gray-400 text-14'>Hi,</span>{' '}
+            <span className='text-gray-400 font-bold ml-1 text-14'>Micheal</span>
+          </p>
+          <MdKeyboardArrowDown 
+            className='text-gray-400 text-14'
+          />
+         </div>
+       </Tooltip>
+      </div>
     </div>
   )
 }
