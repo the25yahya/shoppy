@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FiShoppingCart } from 'react-icons/fi'
 import { BsChatLeft } from 'react-icons/bs'
@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 const Navbar = () => {
 
   //menu contextState
-  const {activeMenu, setActiveMenu } = useStateContext();
+  const {activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize } = useStateContext();
   //reusable button component (nav component)
   const Navbutton = ({title, customFunc, icon, color, dotColor}) => (
     <Tooltip label={title}>
@@ -35,6 +35,20 @@ const Navbar = () => {
     dotColor: PropTypes.string,
   };
 
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+    window.addEventListener('resize',handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize',handleResize);
+  }, []);
+
+  useEffect(() => {
+    if(screenSize <= 900){
+      setActiveMenu(false);
+    } else{
+      setActiveMenu(true);
+    }
+  },[screenSize]);
 
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
@@ -53,7 +67,7 @@ const Navbar = () => {
        <Navbutton
         title='chat'
         dotColor="#03C9D7" 
-        customFunc={()=>handleClick('cart')}
+        customFunc={()=>handleClick('chat')}
         color="blue"
         icon={<BsChatLeft />}
        />
@@ -81,6 +95,10 @@ const Navbar = () => {
           />
          </div>
        </Tooltip>
+       {isClicked.chat && <Chat />}
+       {isClicked.cart && <Cart />}
+       {isClicked.notification && <Notification />}
+       {isClicked.userProfile && <UserProfile />}
       </div>
     </div>
   )
