@@ -41,7 +41,7 @@ export default {
       },
       backgroundImage: {
         'hero-pattern':
-          "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
+          "url('https://img.freepik.com/free-vector/shopping-time-banner-with-realistic-map-cart-gift-bags-vector-illustration_548887-120.jpg?w=1380&t=st=1696951253~exp=1696951853~hmac=b99fab27a9c1245b5e41522235b11ab29281ac758ed43571cbd97a3093e95ec9')",
       },
     },
   },
