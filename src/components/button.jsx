@@ -1,9 +1,24 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-const button = () => {
+
+const Button = ({bgColor, color, size, text, borderRadius}) => {
   return (
-    <div>button</div>
+    <div
+    type="button"
+    style={{backgroundColor:bgColor,color,borderRadius}}
+    className={`text-${size} p-3 hover:drop-shadow-xl`}
+    >
+     {text}
+    </div>
   )
 }
+Button.propTypes = {
+  bgColor: PropTypes.string,      // Expected to be a string
+  color: PropTypes.string,        // Expected to be a string
+  size: PropTypes.string,         // Expected to be a string
+  text: PropTypes.string,         // Expected to be a string
+  borderRadius: PropTypes.string,  // Expected to be a string
+};
 
-export default button
+export default Button
