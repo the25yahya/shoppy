@@ -5,7 +5,6 @@ import { BsChatLeft } from 'react-icons/bs'
 import { BsChatRight } from 'react-icons/bs'
 import { RiNotification3Line } from 'react-icons/ri'
 import { MdKeyboardArrowDown } from 'react-icons/md'
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Tooltip } from '@chakra-ui/react'
 import avatar from '../data/avatar.jpg';
 import { Cart, Chat, Notification, UserProfile} from '.';

@@ -4,7 +4,7 @@ import { Stacked, Pie, SparkLine } from '../components';
 import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import { Button } from '../components';
-
+import { GoPrimitiveDot } from 'react-icons/go';
 
 const Ecommerce = () => {
   return (
@@ -17,7 +17,7 @@ const Ecommerce = () => {
           <p className='text-2xl'>$63.448.78</p>
         </div>
        </div>
-       <div className='mt-6'>
+       <div className='cursor-pointer mt-6'>
          <Button 
           color="white"
           bgColor="blue"
@@ -53,12 +53,30 @@ const Ecommerce = () => {
 
      <div className='flex gap-10 flex-wrap justify-center'>
       <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
-        <div className='flex justify-between'>
+        <div className='flex items-center justify-between'>
           <p className='font-semibold text-xl'>Revenue Updates</p>
           <div className="flex items-center gap-4">
-            <p>
-              <span></span>
+            <p className='text-center'>
+              <span className='text-5xl font-bold'>.</span>
+              <span className='text-gray-600'> Expense</span>
             </p>
+            <p className='text-green-400 text-center'>
+              <span className='text-5xl font-bold'>.</span>
+              <span> Budget</span>
+            </p>
+          </div>
+        </div>
+        <div className='mt-10 flex gap-10 flex-wrap justify-center'>
+          <div className='border-r-1 border-color m-4 pr-10 '>
+            <p>
+              <span className='text-3xl font-semibold'>$93,438</span>
+              <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>23%</span>
+            </p>
+            <p className='text-gray-500 mt-1'>Budget</p>
+          </div>
+          <div className="mt-8">
+                <p className="text-3xl font-semibold">$48,487</p>
+                <p className="text-gray-500 mt-1">Expense</p>
           </div>
         </div>
       </div>
