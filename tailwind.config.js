@@ -25,6 +25,7 @@ export default {
         color: 'rgba(0, 0, 0, 0.1)',
       },
       width: {
+        130:'130px',
         400: '400px',
         760: '760px',
         780: '780px',
